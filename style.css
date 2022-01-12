@@ -13,7 +13,6 @@ body {
 }
 
 .flexContainer {
-    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -30,10 +29,16 @@ body {
     align-items: flex-end;
     align-content: center;
     max-width: 100%;
-    height: 550px;
+    height: 500px;
     background-color: lightgray;
     border: 1px solid black;
     padding: 5px;
+}
+
+#calc,
+#result {
+    margin: 0;
+    padding: 0;
 }
 
 #calc {

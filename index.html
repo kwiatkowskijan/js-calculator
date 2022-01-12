@@ -15,22 +15,22 @@
             <p id="calc"></p>
             <p id="result"></p>
             <div class="gridContainer">
-                <div class="gridItem mark" id="clear">C</div>
+                <div class="gridItem mark" id="clear" onclick="clear()">C</div>
                 <div class="gridItem mark" id=""></div>
                 <div class="gridItem mark" id="back">BCK</div>
-                <div class="gridItem mark" id="division">/</div>
-                <div class="gridItem number" id="seven">7</div>
-                <div class="gridItem number" id="eight">8</div>
-                <div class="gridItem number" id="nine">9</div>
-                <div class="gridItem mark" id="multiplication">X</div>
-                <div class="gridItem number" id="four">4</div>
-                <div class="gridItem number" id="five">5</div>
-                <div class="gridItem number" id="six">6</div>
-                <div class="gridItem mark" id="substraction">-</div>
-                <div class="gridItem number" id="one" onclick="one()">1</div>
-                <div class="gridItem number" id="two" onclick="two()">2</div>
-                <div class="gridItem number" id="three">3</div>
-                <div class="gridItem mark" id="addition" onclick="addition()">+</div>
+                <div class="gridItem mark" id="division" onclick="addNumber(':')">/</div>
+                <div class="gridItem number" id="seven" onclick="addNumber('7')">7</div>
+                <div class="gridItem number" id="eight" onclick="addNumber('8')">8</div>
+                <div class="gridItem number" id="nine" onclick="addNumber('9')">9</div>
+                <div class="gridItem mark" id="multiplication" onclick="addNumber('*')">X</div>
+                <div class="gridItem number" id="four" onclick="addNumber('4')">4</div>
+                <div class="gridItem number" id="five" onclick="addNumber('5')">5</div>
+                <div class="gridItem number" id="six" onclick="addNumber('6')">6</div>
+                <div class="gridItem mark" id="substraction" onclick="addNumber('-')">-</div>
+                <div class="gridItem number" id="one" onclick="addNumber('1')">1</div>
+                <div class="gridItem number" id="two" onclick="addNumber('2')">2</div>
+                <div class="gridItem number" id="three" onclick="addNumber('3')">3</div>
+                <div class="gridItem mark" id="addition" onclick="addNumber('+')">+</div>
                 <div class="gridItem mark" id=""></div>
                 <div class="gridItem number" id="zero">0</div>
                 <div class="gridItem mark" id="comma">,</div>
@@ -38,6 +38,7 @@
             </div>
         </div>
         <script src="script.js"></script>
+    </div>
 </body>
 
 </html>
