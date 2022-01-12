@@ -19,6 +19,11 @@ function addChar(character) {
     clearResult();
 
     //input data validation
+    if (calcElement.innerHTML != undefined && calcElement.innerHTML.length >= 34) {
+        document.getElementById("result").innerHTML = "Za dużo znaków";
+        return;
+    }
+
     if (calcElement.innerHTML != undefined && calcElement.innerHTML.length > 0) {
         var lastChar = calcElement.innerHTML.substring(calcElement.innerHTML.length - 1);
         if (isOperationCharacter(lastChar) && isOperationCharacter(character)) {
