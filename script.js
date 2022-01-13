@@ -19,7 +19,7 @@ function addChar(character) {
     clearResult();
 
     //input data validation
-    if (calcElement.innerHTML != undefined && calcElement.innerHTML.length >= 34) {
+    if (calcElement.innerHTML != undefined && calcElement.innerHTML.length >= 23) {
         document.getElementById("result").innerHTML = "Za dużo znaków";
         return;
     }
