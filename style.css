@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -69,7 +70,7 @@ p {
 }
 
 #result {
-    font-size: 2rem;
+    font-size: 1.8rem;
     height: 34px;
 }
 
@@ -106,7 +107,7 @@ p {
 }
 
 .number:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .equal {
@@ -124,13 +125,18 @@ p {
 }
 
 .mark:hover {
-    background-color: rgba(18, 18, 18, 0.8);
+    background-color: rgba(18, 18, 18, 0.5);
 }
 
 .fab {
     color: #fff;
     text-decoration: none;
     font-size: 4rem;
+    transition: color 0.5s;
+}
+
+.fab:hover{
+    color: rgba(255,255,255,0.5)
 }
 
 @media (max-width: 700px) {
