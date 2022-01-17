@@ -106,7 +106,7 @@ p {
 }
 
 .number:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .equal {
@@ -124,13 +124,18 @@ p {
 }
 
 .mark:hover {
-    background-color: rgba(18, 18, 18, 0.8);
+    background-color: rgba(18, 18, 18, 0.5);
 }
 
 .fab {
     color: #fff;
     text-decoration: none;
     font-size: 4rem;
+    transition: color 0.3s;
+}
+
+.fab:hover {
+    color: #353636;
 }
 
 @media (max-width: 700px) {
@@ -152,5 +157,11 @@ p {
     .gridContainer {
         grid-template-columns: 50px 50px 50px 50px;
         grid-template-rows: 40px 40px 40px 40px 40px;
+    }
+}
+
+@media (max-width: 350px) {
+    #title {
+        display: none;
     }
 }
