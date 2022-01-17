@@ -7,16 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fe525bff25.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="flexContainer">
+        <div id="title">
+            <h1>Basic calculator</h1>
+            <p>By Jan Kwiatkowski</p>
+        </div>
         <div id="calculator">
-            <p id="calc"></p>
-            <p id="result"></p>
+            <div class="resultBox">
+                <p id="calc"></p>
+                <p id="result"></p>
+            </div>
             <div class="gridContainer">
                 <div class="gridItem mark" id="clear" onclick="clearCalculation()">C</div>
-                <div class="gridItem mark" id=""></div>
+                <div class="gridItem mark" onclick="easteregg()"></div>
                 <div class="gridItem mark" id="back" onclick="backspace()">BCK</div>
                 <div class="gridItem mark" id="division" onclick="addChar('/')">/</div>
                 <div class="gridItem number" id="seven" onclick="addChar('7')">7</div>
@@ -31,14 +38,17 @@
                 <div class="gridItem number" id="two" onclick="addChar('2')">2</div>
                 <div class="gridItem number" id="three" onclick="addChar('3')">3</div>
                 <div class="gridItem mark" id="addition" onclick="addChar('+')">+</div>
-                <div class="gridItem mark" id=""></div>
+                <div class="gridItem mark" onclick="easteregg()"></div>
                 <div class="gridItem number" id="zero" onclick="addChar('0')">0</div>
                 <div class="gridItem mark" id="comma" onclick="addChar('.')">.</div>
                 <div class="gridItem equal" id="equal" onclick="calculateResult()">=</div>
             </div>
         </div>
+        <div id="footer">
+            <a class="fab fa-github" href="https://github.com/kwiatkowskijan/js-calculator" target="_blank"></a>
+        </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js "></script>
 </body>
 
 </html>

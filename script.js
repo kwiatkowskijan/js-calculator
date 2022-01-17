@@ -19,8 +19,8 @@ function addChar(character) {
     clearResult();
 
     //input data validation
-    if (calcElement.innerHTML != undefined && calcElement.innerHTML.length >= 34) {
-        document.getElementById("result").innerHTML = "Za dużo znaków";
+    if (calcElement.innerHTML != undefined && calcElement.innerHTML.length >= 23) {
+        document.getElementById("result").innerHTML = "To many chars";
         return;
     }
 
@@ -51,7 +51,7 @@ function calculateResult() {
     if (calcValue != undefined && calcValue.length > 0) {
         var result = eval(calcValue);
         if (result == Number.POSITIVE_INFINITY || Number.isNaN(result) || result == Number.NEGATIVE_INFINITY) {
-            result = "Niedozwolone działanie";
+            result = "Invalid calc";
         }
         document.getElementById("result").innerHTML = result;
     }
@@ -64,4 +64,8 @@ function backspace() {
     if (calcValue != undefined && calcValue.length > 0) {
         document.getElementById("calc").innerHTML = calcValue.substring(0, calcValue.length - 1);
     }
+}
+
+function easteregg() {
+    document.getElementById("result").innerHTML = "This is useless :)";
 }
