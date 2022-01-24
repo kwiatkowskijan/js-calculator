@@ -1,10 +1,10 @@
 function clearCalculation() {
-    document.getElementById("calc").innerHTML = "";
+    document.getElementById("calc").textContent = "";
     clearResult();
 }
 
 function clearResult() {
-    document.getElementById("result").innerHTML = "";
+    document.getElementById("result").textContent = "";
 }
 
 function isOperationCharacter(character) {
@@ -19,33 +19,33 @@ function addChar(character) {
     clearResult();
 
     //input data validation
-    if (calcElement.innerHTML != undefined && calcElement.innerHTML.length >= 23) {
-        document.getElementById("result").innerHTML = "To many chars";
+    if (calcElement.textContent != undefined && calcElement.textContent.length >= 23) {
+        document.getElementById("result").textContent = "To many chars";
         return;
     }
 
-    if (calcElement.innerHTML != undefined && calcElement.innerHTML.length > 0) {
-        var lastChar = calcElement.innerHTML.substring(calcElement.innerHTML.length - 1);
+    if (calcElement.textContent != undefined && calcElement.textContent.length > 0) {
+        var lastChar = calcElement.textContent.substring(calcElement.textContent.length - 1);
         if (isOperationCharacter(lastChar) && isOperationCharacter(character)) {
             backspace();
         }
     }
 
     //add char to calc element
-    if (calcElement.innerHTML == undefined) {
-        calcElement.innerHTML = character;
+    if (calcElement.textContent == undefined) {
+        calcElement.textContent = character;
     } else {
-        calcElement.innerHTML = calcElement.innerHTML + character;
+        calcElement.textContent = calcElement.textContent + character;
     }
 }
 
 
 function calculateResult() {
-    var calcValue = document.getElementById("calc").innerHTML;
+    var calcValue = document.getElementById("calc").textContent;
 
     if (calcValue != undefined && calcValue.length > 0 && isOperationCharacter(calcValue.substring(calcValue.length - 1))) {
         backspace();
-        calcValue = document.getElementById("calc").innerHTML;
+        calcValue = document.getElementById("calc").textContent;
     }
 
     if (calcValue != undefined && calcValue.length > 0) {
@@ -53,19 +53,20 @@ function calculateResult() {
         if (result == Number.POSITIVE_INFINITY || Number.isNaN(result) || result == Number.NEGATIVE_INFINITY) {
             result = "Invalid calc";
         }
-        document.getElementById("result").innerHTML = result;
+        document.getElementById("result").textContent = result;
     }
 }
 
 function backspace() {
-    var calcValue = document.getElementById("calc").innerHTML;
+    var calcValue = document.getElementById("calc").textContent;
     clearResult();
 
     if (calcValue != undefined && calcValue.length > 0) {
-        document.getElementById("calc").innerHTML = calcValue.substring(0, calcValue.length - 1);
+        document.getElementById("calc").textContent = calcValue.substring(0, calcValue.length - 1);
     }
 }
 
 function easteregg() {
-    document.getElementById("result").innerHTML = "This is useless :)";
+    document.getElementById("result").textContent = "This is useless :)";
+    document.getElementById("calc").textContent = "";
 }
